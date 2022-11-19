@@ -153,7 +153,8 @@
     </div>
 
     <!-- Symtoms Modal -->
-    <div class="modal fade modal-dialog modal-dialog-scrollable" id="symtomps" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal-dialog modal-dialog-scrollable" id="symtomps" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -264,7 +265,8 @@
 
 
     <!-- prevent Modal -->
-    <div class="modal fade modal-dialog modal-dialog-scrollable" id="prevent" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade modal-dialog modal-dialog-scrollable" id="prevent" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -372,18 +374,27 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <img class="img-fluid img-logo" src="img/logo.png" alt="logo">
+                    <div class="container">
+                        <div class="progress">
+                            <div class="progress-bar progress-bar-striped progress-bar-animated p-b" style="width:0">
+                            </div>
+
+                        </div>
+                    </div>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    
-                    <div class="container">
-                        
-                        <div class="row q-1">
+
+                    <div class="container question">
+
+                        <div class="row q-1 active">
                             <h3>Do you have Fever above 101.4?</h3>
                             <img class="img-fluid py-3" src="img/1.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(1, 1, 2)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(1, 2, 2)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -391,8 +402,10 @@
                             <h3>Do you have Cough - (Dry Cough)?</h3>
                             <img class="img-fluid py-3" src="img/2.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(2, 1, 3)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(2, 2, 3)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -400,8 +413,10 @@
                             <h3>Do you have Cough - (Wet Cough)?</h3>
                             <img class="img-fluid py-3" src="img/3.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(3, 1, 4)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(3, 2, 4)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -409,8 +424,10 @@
                             <h3>Do you have Shortness of Breath?</h3>
                             <img class="img-fluid py-3" src="img/4.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(4, 1, 5)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(4, 2, 5)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -418,8 +435,10 @@
                             <h3>Do you have Flu?</h3>
                             <img class="img-fluid py-3" src="img/5.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(5, 1, 6)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(5, 2, 6)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -427,17 +446,22 @@
                             <h3>Have you travelled abroad in the last 15 days?</h3>
                             <img class="img-fluid py-3" src="img/6.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(6, 1, 7)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(6, 2, 7)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
                         <div class="row q-7">
-                            <h3>Have you been in contact with any person who has recently travelled internationally?</h3>
+                            <h3>Have you been in contact with any person who has recently travelled internationally?
+                            </h3>
                             <img class="img-fluid py-3" src="img/7.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(7, 1, 8)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(7, 2, 8)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -445,8 +469,10 @@
                             <h3>Do you have chest infection?</h3>
                             <img class="img-fluid py-3" src="img/8.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(8, 1, 9)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(8, 2, 9)" class="btn btn-primary btn-lg w-100 my-1">No, I
+                                    don't</button>
                             </div>
                         </div>
 
@@ -454,8 +480,10 @@
                             <h3>Is your age more than or equal to 60 years of age?</h3>
                             <img class="img-fluid py-3" src="img/9.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(9, 1, 10)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(9, 2, 10)" class="btn btn-primary btn-lg w-100 my-1">No,
+                                    I don't</button>
                             </div>
                         </div>
 
@@ -463,9 +491,50 @@
                             <h3>Due to Co-morbidities, do you take any medicine?</h3>
                             <img class="img-fluid py-3" src="img/10.png">
                             <div class="bottom-question">
-                                <button class="btn btn-primary btn-lg w-100 my-1">Yes, I do</button>
-                                <button class="btn btn-primary btn-lg w-100 my-1">No, I don't</button>
+                                <button onclick="recordAnswers(10, 1, 0)" class="btn btn-primary btn-lg w-100 my-1">Yes,
+                                    I do</button>
+                                <button onclick="recordAnswers(10, 2, 0)" class="btn btn-primary btn-lg w-100 my-1">No,
+                                    I don't</button>
                             </div>
+                        </div>
+
+                        <div class="row result1">
+                            <h3>High Probability of Corona!</h3>
+                            <ol class="py-3">
+                                <li>Isolate From Others</li>
+                                <li>Rest and Take Care</li>
+                                <li>Call Work Health Providers</li>
+                                <li>Monitor Symptoms/li>
+                                <li>Talk to Someone About Testing</li>
+                                <li>Follow Govt Instructions</li>
+                            </ol>
+                            <p>As of now, your answers suggest that you may need testing. If anything changes, take the
+                                questionnaire again.</p>
+                        </div>
+
+                        <div class="row result2">
+                            <h3>Suspected for Corona!</h3>
+                            <ol class="py-3">
+                                <li>Isolate From Others</li>
+                                <li>Rest and Take Care</li>
+                                <li>Call Work Health Providers</li>
+                                <li>Monitor Symptoms/li>
+                                <li>Talk to Someone About Testing</li>
+                                <li>Follow Govt Instructions</li>
+                            </ol>
+                            <p>As of now, your answers suggest that you may need testing. If anything changes, take the
+                                questionnaire again.</p>
+                        </div>
+
+                        <div class="row result3">
+                            <h3>You are all Good!</h3>
+                            <ol class="py-3">
+                                <li>No Test Needed At This Time</li>
+                                <li>Maintain Social Distance</li>
+                                <li>Avoid groups of people and keep six feet apart from anyone who’s not part of the
+                                    household. Especially avoid those showing symptoms.
+                                    As of now, their answers suggest they do not need to get tested. If anything
+                                    changes, take the questionnaire again.</li>
                         </div>
 
                     </div>
@@ -475,6 +544,7 @@
         </div>
     </div>
 
+    <script src="script.js"></script>
 
     <!-- Bootstrap JavaScript Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -484,6 +554,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
         integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
         </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>
 
 </html>
